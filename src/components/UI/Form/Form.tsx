@@ -6,11 +6,11 @@ const Form: React.FC<{
 }> = (props) => {
 	return (
 		<form onSubmit={props.onSubmit} className={classes.form}>
-			<div>
+			<div className={classes.input}>
 				<label htmlFor="email">email</label>
 				<input type="text" name="" id="email" />
 			</div>
-			<div>
+			<div className={classes.input}>
 				<label htmlFor="password">password</label>
 				<input type="password" name="" id="password" />
 			</div>

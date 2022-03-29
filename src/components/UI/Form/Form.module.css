@@ -1,0 +1,17 @@
+.form {
+}
+.input {
+	margin: 10px 0;
+}
+.input label {
+	width: 100px;
+	display: inline-block;
+}
+
+.input input {
+}
+
+.form button {
+	margin: 10px 0 0 0;
+	padding: 5px 10px;
+}

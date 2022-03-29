@@ -10,7 +10,8 @@ const Login = () => {
 	return (
 		<>
 			<Layouts>
-				<Form onSubmit={loginHandler} btnName={"login"} />
+				<h2>Login</h2>
+				<Form onSubmit={loginHandler} btnName={"Login"} />
 			</Layouts>
 		</>
 	);
