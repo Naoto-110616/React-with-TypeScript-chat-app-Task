@@ -1,10 +1,17 @@
 import "./App.css";
-import Layouts from "./components/layouts/Layouts";
+
+import { Route, Redirect, Switch } from "react-router-dom";
+
+import Login from "./components/Pages/Login/Login";
 
 function App() {
 	return (
 		<div className="App">
-			<Layouts></Layouts>
+			<Switch>
+				<Route path="/login">
+					<Login />
+				</Route>
+			</Switch>
 		</div>
 	);
 }
