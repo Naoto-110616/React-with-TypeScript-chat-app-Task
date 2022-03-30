@@ -4,6 +4,7 @@ import { Route, Redirect, Switch } from "react-router-dom";
 
 import Login from "./components/Pages/Login/Login";
 import SignUp from "./components/Pages/SignUp/SignUp";
+import Room from "./components/Pages/Chat/Room";
 
 function App() {
 	return (
@@ -17,6 +18,9 @@ function App() {
 				</Route>
 				<Route path="/signup">
 					<SignUp />
+				</Route>
+				<Route path="/room">
+					<Room />
 				</Route>
 			</Switch>
 		</div>
