@@ -2,8 +2,7 @@ import "./App.css";
 
 import { Route, Redirect, Switch } from "react-router-dom";
 
-import Login from "./components/Pages/Login/Login";
-import SignUp from "./components/Pages/SignUp/SignUp";
+import Auth from "./components/Pages/Auth/Auth";
 import Room from "./components/Pages/Chat/Room";
 
 function App() {
@@ -11,13 +10,10 @@ function App() {
 		<div className="App">
 			<Switch>
 				<Route path="/" exact>
-					<Redirect to="/login" />
+					<Redirect to="/Auth" />
 				</Route>
-				<Route path="/login">
-					<Login />
-				</Route>
-				<Route path="/signup">
-					<SignUp />
+				<Route path="/Auth">
+					<Auth />
 				</Route>
 				<Route path="/room">
 					<Room />
