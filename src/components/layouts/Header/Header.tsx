@@ -7,18 +7,13 @@ const Header: React.FC = () => {
 			<h1>chat app</h1>
 			<ul>
 				<li>
-					<NavLink to="/login" activeClassName={classes.active}>
-						Login
+					<NavLink to="/Auth" activeClassName={classes.active}>
+						Auth
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to="/logout" activeClassName={classes.active}>
 						Logout
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/signUp" activeClassName={classes.active}>
-						SignUp
 					</NavLink>
 				</li>
 			</ul>
