@@ -1,17 +1,13 @@
 import Layouts from "../../Layouts/Layouts";
 
-import Form from "../../UI/Form/Form";
+import AuthForm from "../../UI/AuthForm/AuthForm";
 
 const SignUp = () => {
-	const signUpHandler = (event: React.FormEvent) => {
-		event.preventDefault();
-		console.log("submitted");
-	};
 	return (
 		<>
 			<Layouts>
 				<h2>SignUp</h2>
-				<Form onSubmit={signUpHandler} btnName={"SignUp"} />
+				<AuthForm btnName={"SignUp"} />
 			</Layouts>
 		</>
 	);
