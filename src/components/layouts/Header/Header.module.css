@@ -11,3 +11,11 @@
 	width: 50%;
 	justify-content: space-between;
 }
+.header ul li a {
+	color: #000;
+	text-decoration: none;
+}
+.header a:active,
+.header a.active {
+	opacity: 0.6;
+}

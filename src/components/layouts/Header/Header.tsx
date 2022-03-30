@@ -1,5 +1,5 @@
 import classes from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header: React.FC = () => {
 	return (
@@ -7,13 +7,19 @@ const Header: React.FC = () => {
 			<h1>chat app</h1>
 			<ul>
 				<li>
-					<Link to="/login">login</Link>
+					<NavLink to="/login" activeClassName={classes.active}>
+						Login
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/logout">logout</Link>
+					<NavLink to="/logout" activeClassName={classes.active}>
+						Logout
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/signUp">signUp</Link>
+					<NavLink to="/signUp" activeClassName={classes.active}>
+						SignUp
+					</NavLink>
 				</li>
 			</ul>
 		</header>
