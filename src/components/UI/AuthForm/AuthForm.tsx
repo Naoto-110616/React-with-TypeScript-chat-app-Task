@@ -1,8 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+
 import classes from "./AuthForm.module.css";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+import AuthContext from "../../../store/auth-context";
+import { useHistory } from "react-router-dom";
 
 const AuthForm: React.FC = () => {
+	const history = useHistory();
+
+	const authCtx = useContext(AuthContext);
+
 	const [isLogin, setIsLogin] = useState(true);
 
 	const emailInputRef = useRef<HTMLInputElement>(null);
@@ -35,14 +42,23 @@ const AuthForm: React.FC = () => {
 			headers: {
 				"Content-Type": "application/json",
 			},
-		}).then((res) => {
-			if (res.ok) {
-			} else {
-				return res.json().then((data) => {
-					console.log(data);
-				});
-			}
-		});
+		})
+			.then((res) => {
+				if (res.ok) {
+					return res.json();
+				} else {
+					return res.json().then((data) => {
+						console.log(data);
+					});
+				}
+			})
+			.then((data) => {
+				authCtx.login(data.localId);
+				history.push("room");
+			})
+			.catch((err) => {
+				alert(err.message);
+			});
 	};
 	return (
 		<>
