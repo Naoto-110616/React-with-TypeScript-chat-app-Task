@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
-import Layouts from "../../Layouts/Layouts";
 import classes from "./AuthForm.module.css";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const AuthForm: React.FC = () => {
 	const [isLogin, setIsLogin] = useState(true);
+
 	const emailInputRef = useRef<HTMLInputElement>(null);
 	const passwordInputRef = useRef<HTMLInputElement>(null);
 
